@@ -1,0 +1,99 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(css/mortalkombat5.ttf);
+}
+
+body {
+    background-image: url("../img/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: myFirstFont;
+    
+    
+}
+
+.container {
+    text-align: center;
+}
+
+#h1 {
+    font-size: 45px;
+    color: red;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#p2 {
+    font-size: 35px;
+    color: red;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+#p3 {
+    font-size: 25px;
+    color: red;
+}
+
+.text {
+    margin-left: 20px;
+}
+
+#h12 {
+    margin-top: 20px;
+    left: 100px;
+}
+
+#h13 {
+    margin-top: 20px;
+    right: 100px;
+}
+
+.vs {
+    
+    margin-top: 30px;
+}
+
+.container00 {
+    margin-top: 30px;
+}
+
+.containerB {
+    padding-top: 70px;
+    font-size: 25px;
+}
+
+
+
+a:hover {
+    background-color: red;
+    color: #ffffff;
+    height: 180px;
+    width: 180px; 
+}
+
+.image:hover {
+    box-shadow: 0 0 2px 1px red;
+    height: 180px;
+    width: 180px;
+}
+
+.gallery:hover {
+    width: 180; 
+    height: 180;
+}
+
+footer {
+    font-size: 15px;
+    text-align: center;
+    background-color: #000000af;
+    color: red;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    padding: 0px;
+}
+
+
