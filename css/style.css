@@ -1,6 +1,6 @@
 @font-face {
     font-family: myFirstFont;
-    src: url(css/mortalkombat5.ttf);
+    src: url(mortalkombat5.ttf);
 }
 
 body {
@@ -59,8 +59,15 @@ body {
 }
 
 .containerB {
-    padding-top: 70px;
+    padding-top: 40px;
     font-size: 25px;
+}
+
+.hp1, .hp2, .hp3, .hp4  {
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.295);
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 
@@ -76,7 +83,7 @@ a:hover {
     box-shadow: 0 0 2px 1px red;
     height: 180px;
     width: 180px;
-}
+    }
 
 .gallery:hover {
     width: 180; 

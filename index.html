@@ -29,13 +29,18 @@
                 <img src="img/koin.png" width="70" height="70"></div>
 
 
-            <div class="col-8" id="h1">MORTAL  KOMBAT  GAME
+                <div class="col-8" id="h1">
+
+                
+                
+                MORTAL  KOMBAT  GAME
+
 
 
                 <div class="row" id = "p7">
                     <div class="col-12" id="h71">
                 <div id="musicControls" class="text-center">
-                    <button class="btn btn-warning btn-xs btn-danger">
+                    <button class="btn btn-warning btn-xs btn-danger" id="btnPlay">
                       <span class="fa fa-music"></span> Play music</button>
                     <button class="btn btn-dark btn-xs pause-button">
                       <span class="fa fa-pause"></span> Pause music</button>
@@ -61,10 +66,11 @@
             <div class="row" id="p3">
                 <div class="col-3" id="h31"><div class="container00">
                     <div class="gallery">
-                        <a target="_blank" href="img/subzero.png">
-                        <img src="img/subzero.png" width="160" height="160" class="image">
-                        </a><div class="overlay">
-                        <div class="text">Sub Zero</div></div></div>
+                        <a><img src="img/subzero.png" width="160" height="160" class="image"></a>
+                        <div class="overlay">
+                        <div class="text">Sub Zero</div>
+                        <div class="hp1"></div>
+                    </div></div>
                 </div>
             </div>   
                     
@@ -74,10 +80,10 @@
                 
             <div class="col-3" id="h32"><div class="container00">
                 <div class="gallery">
-                        <a target="_blank" href="img/scorpion.png">
-                        <img src="img/scorpion.png" width="160" height="160" class="image">
-                        </a><div class="overlay">
-                    <div class="text">Scorpion</div></div></div>
+                    <a><img src="img/scorpion.png" width="160" height="160" class="image"></a>
+                    <div class="overlay">
+                    <div class="text">Scorpion</div>
+                    <div class="hp2"></div></div></div>
                 </div>
             </div>
             
@@ -85,20 +91,20 @@
 
             <div class="col-3" id="h33"><div class="container00">
                 <div class="gallery">
-                        <a target="_blank" href="img/jax.png">
-                        <img src="img/jax.png" width="160" height="160" class="image">
-                        </a><div class="overlay">
-                    <div class="text">Jax</div></div></div>
+                    <a><img src="img/jax.png" width="160" height="160" class="image"></a>
+                    <div class="overlay">
+                    <div class="text">Jax</div>
+                    <div class="hp3"></div></div></div>
                 </div>
             </div>
                 
 
             <div class="col-3" id="h34"><div class="container00">
                 <div class="gallery">
-                        <a target="_blank" href="img/milena.png">
-                        <img src="img/milena.png" width="160" height="160" class="image">
-                        </a><div class="overlay">
-                    <div class="text">Milena</div></div></div>
+                    <a><img src="img/milena.png" width="160" height="160" class="image"></a>
+                    <div class="overlay">
+                    <div class="text">Milena</div>
+                    <div class="hp4"></div></div></div>
                 </div>
             </div>
         </div>
@@ -114,17 +120,17 @@
 
 
             <div class="col-5" id="h41"><div class="containerB">
-                <div class="gallery1">
-                        <img src="img/scorpion.png" width="160" height="160">
-                        </a><div class="overlay">
-                    <div class="text">Scorpion</div></div></div>
+                    <div class="defender"></div>
+                    <div class="gallery1">
+                    <div class="overlay">
+                    <div class="hp5"></div></div></div>
                 </div>
             </div>
 
 
 
             <div class="col-3" id="h42"><div class="containerB">
-                <div class="gallery2">
+                    <div class="gallery2">
                     <img src="img/vs.png" width="130" height="130" class="vs">
                     </div>
                 </div>
@@ -133,11 +139,10 @@
 
         
             <div class="col-4" id="h43"><div class="containerB">
-                <div class="gallery3">
-                        
-                        <img src="img/scorpion.png" width="160" height="160">
-                        
-                    <div class="text">Scorpion</div>
+                    <div class="attacker"></div>
+                    <div class="gallery3">
+                    <div class="overlay"></div>
+                    <div class="hp6"></div>
                 </div>
             </div>
         </div>
@@ -148,7 +153,7 @@
 
     <div class="row" id = "p5">
         <div class="col-12" id="h51">
-        <button type="button" class="btn btn-danger">FIGHT!</button>
+        <button type="button" class="btn btn-danger" id="btnFight">FIGHT!</button>
         </div>
     </div>
 
@@ -161,58 +166,15 @@
         </div>
     </div>
 
+ 
     
-    
-    
-    
-
-   
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
 </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+
 </body>
+
 <footer>Copyright&copy;</footer>
+
 </html>
