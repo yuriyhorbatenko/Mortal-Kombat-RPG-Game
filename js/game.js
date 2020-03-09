@@ -1,5 +1,10 @@
 
 
+///// Hide some content /////
+
+$( "#h42" ).hide();
+$( "#btnFight" ).hide();
+
 ///// Audio Link's for Game Sounds /////
 
 
@@ -137,12 +142,12 @@ $("#h34").on("click", function() {
                 attack: subZeroAttack,
                 counterAttack: subZeroCountAt,
             }
-            
-            $("#h61").append(player1.name);
-            $("#h61").append("Health Point " + player1.hp);
-            $("#h61").append("Attack " + player1.attack);
-            $("#h61").append("Block " + player1.counterAttack);
+                        
+            $("#h71").append("Attack " + player1.attack);
+            $("#h81").append("Block " + player1.counterAttack);
             $("#h31").animate({ bottom: "-280px", left: "20px" }, "slow");
+            $("#h42").show();
+            $("#btnFight").show();
             console.log("Player chose " + player1.name)
         }
     
@@ -154,10 +159,10 @@ $("#h34").on("click", function() {
                 counterAttack: subZeroCountAt,
             }
             
-            $("#h62").append("Health Point " + player2.hp);
-            $("#h62").append("Attack " + player2.attack);
-            $("#h62").append("Block " + player2.counterAttack);
-            $("#h31").animate({ bottom: "-280px", left: "550px" }, "slow");
+            $("#h72").append("Attack " + player2.attack);
+            $("#h82").append("Block " + player2.counterAttack);
+            $("#h31").animate({ bottom: "-280px", left: "530px" }, "slow");
+            setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
     });
@@ -174,13 +179,14 @@ $("#h34").on("click", function() {
                 hp: scorpionHP,
                 attack: scorpionAttack,
                 counterAttack: scorpionCountAt,
+                
             }
             
-            $("#h61").append(player1.name);
-            $("#h61").append("Health Point " + player1.hp);
-            $("#h61").append("Attack " + player1.attack);
-            $("#h61").append("Block " + player1.counterAttack);
-            $("#h32").animate({ bottom: "-280px", left: "-150px" }, "slow");
+            $("#h71").append("Attack " + player1.attack);
+            $("#h81").append("Block " + player1.counterAttack);
+            $("#h32").animate({ bottom: "-280px", left: "-170px" }, "slow");
+            $("#h42").show();
+            $("#btnFight").show();
             console.log("Player chose " + player1.name)
         }
 
@@ -192,10 +198,10 @@ $("#h34").on("click", function() {
                 counterAttack: scorpionCountAt,
             }
             
-            $("#h62").append("Health Point " + player2.hp);
-            $("#h62").append("Attack " + player2.attack);
-            $("#h62").append("Block " + player2.counterAttack);
-            $("#h32").animate({ bottom: "-280px", left: "380px" }, "slow");
+            $("#h72").append("Attack " + player2.attack);
+            $("#h82").append("Block " + player2.counterAttack);
+            $("#h32").animate({ bottom: "-280px", left: "340px" }, "slow");
+            setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
     });
@@ -213,11 +219,11 @@ $("#h34").on("click", function() {
                 counterAttack: jaxCountAt,
             }
             
-            $("#h61").append(player1.name);
-            $("#h61").append("Health Point " + player1.hp);
-            $("#h61").append("Attack " + player1.attack);
-            $("#h61").append("Block " + player1.counterAttack);
-            $("#h33").animate({ bottom: "-280px", left: "-330px" }, "slow");
+            $("#h71").append("Attack " + player1.attack);
+            $("#h81").append("Block " + player1.counterAttack);
+            $("#h33").animate({ bottom: "-280px", left: "-360px" }, "slow");
+            $("#h42").show();
+            $("#btnFight").show();
             console.log("Player chose " + player1.name)
         }
     
@@ -229,10 +235,10 @@ $("#h34").on("click", function() {
                 counterAttack: jaxCountAt,
             }
             
-            $("#h62").append("Health Point " + player2.hp);
-            $("#h62").append("Attack " + player2.attack);
-            $("#h62").append("Block " + player2.counterAttack);
-            $("#h33").animate({ bottom: "-280px", left: "180px" }, "slow");
+            $("#h72").append("Attack " + player2.attack);
+            $("#h82").append("Block " + player2.counterAttack);
+            $("#h33").animate({ bottom: "-280px", left: "150px" }, "slow");
+            setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
     });
@@ -251,11 +257,11 @@ $("#h34").on("click", function() {
                 counterAttack: milenaCountAt,
             }
             
-            $("#h61").append(player1.name);
-            $("#h61").append("Health Point " + player1.hp);
-            $("#h61").append("Attack " + player1.attack);
-            $("#h61").append("Block " + player1.counterAttack);
+            $("#h71").append("Attack " + player1.attack);
+            $("#h81").append("Block " + player1.counterAttack);
             $("#h34").animate({ bottom: "-280px", left: "-550px" }, "slow");
+            $("#h42").show();
+            $("#btnFight").show();
             console.log("Player chose " + player1.name)
         }
 
@@ -267,217 +273,32 @@ $("#h34").on("click", function() {
                 counterAttack: milenaCountAt,
             }
             
-            $("#h62").append("Health Point " + player2.hp);
-            $("#h62").append("Attack " + player2.attack);
-            $("#h62").append("Block " + player2.counterAttack);
-            $("#h34").animate({ bottom: "-280px", left: "-20px" }, "slow");
+            $("#h72").append("Attack " + player2.attack);
+            $("#h82").append("Block " + player2.counterAttack);
+            $("#h34").animate({ bottom: "-280px", left: "-45px" }, "slow");
+            setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
     });
 
 
-    
+
+    ///// Functions for Attack: /////
 
 
-  
-    
-    
-    
-//    $("#h31").on("click", function() {
-//    $( "#h41" ).before( $( ".containerB" ) );
-//});
-
-//    $("#h32").on("click", function() {
-//  $( "#h42" ).before( $( ".containerB" ) );
-//});
-
-//    $("#h33").on("click", function() {
-//   $( "#h43" ).before( $( ".containerB" ) );
-//});
-
-//    $("#h34").on("click", function() {
-//    $( "#h44" ).before( $( ".containerB" ) );
-//});
-
-
-
-
-    
-
-//    userSelectFirst = false;
-//    userSelectSecond = false;
-
-    
-    
-    
-    
-    //var enemiesRemaining = players.lenght -1;
-
-
-//function playerSelect(){
-
-        
-//    $("#h31").on("click", function() {
-//        var subZero = $("#h31");
-//        if(userSelectFirst === false){
-//        subZero.animate({ bottom: "-280px", left: "50px" }, "slow");
-//        console.log("First player select Sub Zero");
-//        userSelectFirst = true;
-//        };
-
-
-
-
-//       $("#h32").on("click", function() {
-//            var scorpion = $("#h32");
-//            if(userSelectSecond === false){
-//            scorpion.animate({ bottom: "-280px", left: "350px" }, "fast");
-//            console.log("Second player select Sub Zero");
-//           userSelectSecond = true;
-//           };
-//        });
-
-
-
-
-//       ("#h33").on("click", function() {
-//           var jax = $("#h33");
-//           if(userSelectSecond === false){
-//           jax.animate({ bottom: "-280px", left: "350px" }, "slow");
-//            console.log("Second player select Jax");
-//            userSelectSecond = true;
-//            };
-//        });
-
-
-
-        
-//        $("#h34").on("click", function() {
-//           var milena = $("#h34");
-//            if(userSelectSecond === false){
-//            milena.animate({ bottom: "-280px", left: "350px" }, "fast");
-//            console.log("Second player select Milena");
-//            userSelectFirst = true;
-//            };
-//        });
-
-
-        
-        
-        
-//    });
-
-
-
-
-
-
+    $("#btnFight").on("click", function(){
         
 
     
+        player1.attack != 0 && player2.attack != 0
 
+        player2.hp -= player1.hp;
 
+        player1.attack += player1.counterAttack;
 
-
-
-//}
-
-//playerSelect();
-
+        player1.hp -= player2.counterAttack;
     
-
-
-
-
-
-
-
-
-   
-   
-//    $("#h32").on("click", function() {
-
-//    var scorpion = $("#h32");
-
-//    scorpion.animate({ bottom: "-280px", left: "0px" }, "fast");
-
-//    $("#h33").on("click", function() {
-//    var jax = $("#h33");
-
-//    jax.animate({ bottom: "-280px", left: "0px" }, "fast");
     
-//    $("#h34").on("click", function() {
-
-//    var milena = $("#h34");
-
-//   if (subZero)
-//   subZero.animate({ bottom: "-280px", left: "50px" }, "fast");
-//   else ()
-
-
-
     
-
-//      milena.animate({ bottom: "-280px", left: "0px" }, "fast");
-
-//      if (userSelectFirst) {
-
-
-//      userSelectFirst.animate({ bottom: "-280px", left: "50px" }, "fast");
-//       }
-
-//      else (userSelectSecond) 
-
-        
-//   userSelectSecond.animate({ bottom: "-280px", left: "300px" }, "fast");
     
-
-
-
-
-//  var userSelectSecond = (subZero = scorpion = jax = milena);
-
-//  userSelectFirst.animate({ bottom: "-280px", left: "50px" }, "fast");
-//  userSelectSecond.animate({ bottom: "-280px", left: "300px" }, "fast");
-
-
-
-
-
-
-
-
-
-
-//});
-//});    
-//});    
-//});
-
-
-
-
-
-//    function showFighters() {
-
-//      var subZero = $("#h31");
-//      var scorpion = $("#h32");
-//      if (userSelectFirst === subZero || userSelectFirst === scorpion) {
-//      console.log(userSelectFirst)
-//      return;
-    
-
-
-//      if  (userSelectFirst) {
-
-//    $("#h31").on("click", function() {
-//    var subZero = $("#h31");
-//    subZero.animate({ bottom: "-280px", left: "80px" }, "fast");
-//  });
-
-//  $("#h32").on("click", function() {
-//    var scorpion = $("#h32");
-//    scorpion.animate({ bottom: "-280px", left: "300px" }, "fast");
-//  });
-//  }
-//  };
+    });
