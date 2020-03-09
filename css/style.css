@@ -70,6 +70,10 @@ body {
     font-size: 20px;
 }
 
+#p6 {
+    font-size: 20px;
+}
+
 
 
 a:hover {
@@ -81,8 +85,7 @@ a:hover {
 
 .image:hover {
     box-shadow: 0 0 2px 1px red;
-    height: 180px;
-    width: 180px;
+    
     }
 
 .gallery:hover {

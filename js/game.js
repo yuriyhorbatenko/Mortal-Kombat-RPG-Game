@@ -22,6 +22,7 @@ var milenaMusic = document.createElement("audio");
 milenaMusic.setAttribute("src", "audio/milena.wav");
 
 
+
 $("#btnPlay").on("click", function() {
     themeMusic.play();
 });
@@ -49,51 +50,131 @@ $("#h34").on("click", function() {
 
 
 
-///// Fighters Health Bar numbers at Game Start /////
+    ///// Fighters Stats when Game Starts /////
 
 
 
-    // Sub Zero
-    subZeroHP = Math.floor(Math.random() * 200) + 100;
-    subZeroAttack = Math.floor(Math.random() * 100) + 100;
-    subZeroCountAt = Math.floor(Math.random() * 50) + 100;
+
+    // Sub Zer0's stats:
+    subZeroHP = Math.floor(Math.random() * 200) + 200;
+    subZeroAttack = Math.floor(Math.random() * 100) + 50;
+    subZeroCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp1").text(subZeroHP);
     console.log("Sub Zer0 Health - " + subZeroHP);
     console.log("Sub Zer0 Attack - " + subZeroAttack);
     console.log("Sub Zer0 Counter Attack - " + subZeroCountAt);
+    console.log("--------------------------------");
 
 
-    // Scorpion
-    var scorpionHP = 0;
-    for (var i = 0; i < 9; i++) {
-    var random = Math.floor(Math.random() * 50) + 10;
-    scorpionHP = random + scorpionHP;
-    }
+    // Scorpion's stats:
+    scorpionHP = Math.floor(Math.random() * 200) + 200;
+    scorpionAttack = Math.floor(Math.random() * 100) + 50;
+    scorpionCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp2").text(scorpionHP);
-    console.log("HP Scorpion - " + scorpionHP);
+    console.log("Scorpion Health - " + scorpionHP);
+    console.log("Scorpion Attack - " + scorpionAttack);
+    console.log("Scorpion Counter Attack - " + scorpionCountAt);
+    console.log("--------------------------------");
 
 
-    // Jax
-    var jaxHP = 0;
-    for (var i = 0; i < 9; i++) {
-    var random = Math.floor(Math.random() * 50) + 10;
-    jaxHP = random + jaxHP;
-    }
+    // Jax's stats:
+    jaxHP = Math.floor(Math.random() * 200) + 200;
+    jaxAttack = Math.floor(Math.random() * 100) + 50;
+    jaxCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp3").text(jaxHP);
-    console.log("HP Jax - " + jaxHP);
+    console.log("Jax Health- " + jaxHP);
+    console.log("Jax Attack - " + jaxAttack);
+    console.log("Jax Counter Attack - " + jaxCountAt);
+    console.log("--------------------------------");
 
 
-    // Milena
-    var milenaHP = 0;
-    for (var i = 0; i < 9; i++) {
-    var random = Math.floor(Math.random() * 50) + 10;
-    milenaHP = random + milenaHP;
-    }
+    // Milena's stats:
+    milenaHP = Math.floor(Math.random() * 200) + 200;
+    milenaAttack = Math.floor(Math.random() * 100) + 50;
+    milenaCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp4").text(milenaHP);
-    console.log("HP Milena - " + milenaHP);
+    console.log("Milena Health- " + milenaHP);
+    console.log("Milena Attack - " + milenaAttack);
+    console.log("Milena Counter Attack - " + milenaCountAt);
+    console.log("--------------------------------");
 
 
 
+
+
+    ///// Player 1 and Player 2 Variables: /////
+
+
+
+    var playerwin = 0;
+    var playerlose = [];
+
+    var player1 = {
+        fighter: "",
+        hp: 0,
+        attack: 0,
+        counterAttack: 0,
+    };
+
+    var player2 = {
+        fighter: "",
+        hp: 0,
+        attack: 0,
+        counterAttack: 0
+    };
+
+    
+
+
+    $("#h31").on("click", function() {
+        if (player1.attack == 0){
+            player1 = {
+                name: "Sub Zer0",
+                hp: subZeroHP,
+                attack: subZeroAttack,
+                counterAttack: subZeroCountAt,
+            }
+            
+            $("#h61").append(player1.name);
+            $("#h61").append("Health Point " + player1.hp);
+            $("#h61").append("Attack " + player1.attack);
+            $("#h61").append("Block " + player1.counterAttack);
+            $("#h31").animate({ bottom: "-280px", left: "50px" }, "slow");
+            console.log("Player chose " + player1.name)
+        }
+    
+        else if (player2.attack == 0 && player1.name != "Sub Zer0" && !playerlose.includes("Sub Zer0")){
+            player2 = {
+                name: "Sub Zer0",
+                hp: subZeroHP,
+                attack: subZeroAttack,
+                counterAttack: subZeroCountAt,
+            }
+            defenderBar.data('total', bulbHP);
+            defenderBar.data('value', bulbHP);
+
+            $("#h62").text("Health Point " + player2.hp);
+            $("#h62").text("Attack " + player2.attack);
+            $("#h62").text("Block " + player1.counterAttack);
+            $("#h31").animate({ bottom: "-280px", left: "350px" }, "slow");
+        }
+    
+    
+    
+
+
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    });
+    
 
 
 
@@ -120,11 +201,10 @@ $("#h34").on("click", function() {
 
 
 
-    var defender;   
-    var attacker;
+    
 
-    userSelectFirst = false;
-    userSelectSecond = false;
+//    userSelectFirst = false;
+//    userSelectSecond = false;
 
     
     
@@ -133,58 +213,58 @@ $("#h34").on("click", function() {
     //var enemiesRemaining = players.lenght -1;
 
 
-function playerSelect(){
+//function playerSelect(){
 
         
-    $("#h31").on("click", function() {
-        var subZero = $("#h31");
-        if(userSelectFirst === false){
-        subZero.animate({ bottom: "-280px", left: "50px" }, "slow");
-        console.log("First player select Sub Zero");
-        userSelectFirst = true;
-        };
+//    $("#h31").on("click", function() {
+//        var subZero = $("#h31");
+//        if(userSelectFirst === false){
+//        subZero.animate({ bottom: "-280px", left: "50px" }, "slow");
+//        console.log("First player select Sub Zero");
+//        userSelectFirst = true;
+//        };
 
 
 
 
-        $("#h32").on("click", function() {
-            var scorpion = $("#h32");
-            if(userSelectSecond === false){
-            scorpion.animate({ bottom: "-280px", left: "350px" }, "fast");
-            console.log("Second player select Sub Zero");
-            userSelectSecond = true;
-            };
-        });
+//       $("#h32").on("click", function() {
+//            var scorpion = $("#h32");
+//            if(userSelectSecond === false){
+//            scorpion.animate({ bottom: "-280px", left: "350px" }, "fast");
+//            console.log("Second player select Sub Zero");
+//           userSelectSecond = true;
+//           };
+//        });
 
 
 
 
-        ("#h33").on("click", function() {
-            var jax = $("#h33");
-            if(userSelectSecond === false){
-            jax.animate({ bottom: "-280px", left: "350px" }, "slow");
-            console.log("Second player select Jax");
-            userSelectSecond = true;
-            };
-        });
+//       ("#h33").on("click", function() {
+//           var jax = $("#h33");
+//           if(userSelectSecond === false){
+//           jax.animate({ bottom: "-280px", left: "350px" }, "slow");
+//            console.log("Second player select Jax");
+//            userSelectSecond = true;
+//            };
+//        });
 
-
-
-        
-        $("#h34").on("click", function() {
-            var milena = $("#h34");
-            if(userSelectSecond === false){
-            milena.animate({ bottom: "-280px", left: "350px" }, "fast");
-            console.log("Second player select Milena");
-            userSelectFirst = true;
-            };
-        });
 
 
         
+//        $("#h34").on("click", function() {
+//           var milena = $("#h34");
+//            if(userSelectSecond === false){
+//            milena.animate({ bottom: "-280px", left: "350px" }, "fast");
+//            console.log("Second player select Milena");
+//            userSelectFirst = true;
+//            };
+//        });
+
+
         
         
-    });
+        
+//    });
 
 
 
@@ -199,9 +279,9 @@ function playerSelect(){
 
 
 
-}
+//}
 
-playerSelect();
+//playerSelect();
 
     
 
