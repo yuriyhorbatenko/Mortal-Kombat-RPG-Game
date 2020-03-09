@@ -125,6 +125,9 @@ $("#h34").on("click", function() {
 
     
 
+    
+    ///// Functions for Sub Zer0: /////
+
 
     $("#h31").on("click", function() {
         if (player1.attack == 0){
@@ -139,7 +142,7 @@ $("#h34").on("click", function() {
             $("#h61").append("Health Point " + player1.hp);
             $("#h61").append("Attack " + player1.attack);
             $("#h61").append("Block " + player1.counterAttack);
-            $("#h31").animate({ bottom: "-280px", left: "50px" }, "slow");
+            $("#h31").animate({ bottom: "-280px", left: "20px" }, "slow");
             console.log("Player chose " + player1.name)
         }
     
@@ -150,32 +153,130 @@ $("#h34").on("click", function() {
                 attack: subZeroAttack,
                 counterAttack: subZeroCountAt,
             }
-            defenderBar.data('total', bulbHP);
-            defenderBar.data('value', bulbHP);
-
-            $("#h62").text("Health Point " + player2.hp);
-            $("#h62").text("Attack " + player2.attack);
-            $("#h62").text("Block " + player1.counterAttack);
-            $("#h31").animate({ bottom: "-280px", left: "350px" }, "slow");
+            
+            $("#h62").append("Health Point " + player2.hp);
+            $("#h62").append("Attack " + player2.attack);
+            $("#h62").append("Block " + player2.counterAttack);
+            $("#h31").animate({ bottom: "-280px", left: "550px" }, "slow");
+            console.log("Player chose " + player2.name)
         }
-    
-    
-    
+    });
 
 
-        
+
+    ///// Functions for Scorpion: /////
     
-    
-    
-    
-    
-    
-    
-    
-    
+
+    $("#h32").on("click", function(){
+        if (player1.attack == 0){
+            player1 = {
+                name: "Scorpion",
+                hp: scorpionHP,
+                attack: scorpionAttack,
+                counterAttack: scorpionCountAt,
+            }
+            
+            $("#h61").append(player1.name);
+            $("#h61").append("Health Point " + player1.hp);
+            $("#h61").append("Attack " + player1.attack);
+            $("#h61").append("Block " + player1.counterAttack);
+            $("#h32").animate({ bottom: "-280px", left: "-150px" }, "slow");
+            console.log("Player chose " + player1.name)
+        }
+
+        else if (player2.attack == 0 && player1.name != "Scorpion" && !playerlose.includes("Scorpion")){
+            player2 = {
+                name: "Scorpion",
+                hp: scorpionHP,
+                attack: scorpionAttack,
+                counterAttack: scorpionCountAt,
+            }
+            
+            $("#h62").append("Health Point " + player2.hp);
+            $("#h62").append("Attack " + player2.attack);
+            $("#h62").append("Block " + player2.counterAttack);
+            $("#h32").animate({ bottom: "-280px", left: "380px" }, "slow");
+            console.log("Player chose " + player2.name)
+        }
     });
     
 
+    ///// Functions for Jax: /////
+
+
+    $("#h33").on("click", function() {
+        if (player1.attack == 0){
+            player1 = {
+                name: "Jax",
+                hp: jaxHP,
+                attack: jaxAttack,
+                counterAttack: jaxCountAt,
+            }
+            
+            $("#h61").append(player1.name);
+            $("#h61").append("Health Point " + player1.hp);
+            $("#h61").append("Attack " + player1.attack);
+            $("#h61").append("Block " + player1.counterAttack);
+            $("#h33").animate({ bottom: "-280px", left: "-330px" }, "slow");
+            console.log("Player chose " + player1.name)
+        }
+    
+        else if (player2.attack == 0 && player1.name != "Jax" && !playerlose.includes("Jax")){
+            player2 = {
+                name: "Jax",
+                hp: jaxHP,
+                attack: jaxAttack,
+                counterAttack: jaxCountAt,
+            }
+            
+            $("#h62").append("Health Point " + player2.hp);
+            $("#h62").append("Attack " + player2.attack);
+            $("#h62").append("Block " + player2.counterAttack);
+            $("#h33").animate({ bottom: "-280px", left: "180px" }, "slow");
+            console.log("Player chose " + player2.name)
+        }
+    });
+
+
+
+    ///// Functions for Milena: /////
+    
+
+    $("#h34").on("click", function(){
+        if (player1.attack == 0){
+            player1 = {
+                name: "Milena",
+                hp: milenaHP,
+                attack: milenaAttack,
+                counterAttack: milenaCountAt,
+            }
+            
+            $("#h61").append(player1.name);
+            $("#h61").append("Health Point " + player1.hp);
+            $("#h61").append("Attack " + player1.attack);
+            $("#h61").append("Block " + player1.counterAttack);
+            $("#h34").animate({ bottom: "-280px", left: "-550px" }, "slow");
+            console.log("Player chose " + player1.name)
+        }
+
+        else if (player2.attack == 0 && player1.name != "Milena" && !playerlose.includes("Milena")){
+            player2 = {
+                name: "Milena",
+                hp: milenaHP,
+                attack: milenaAttack,
+                counterAttack: milenaCountAt,
+            }
+            
+            $("#h62").append("Health Point " + player2.hp);
+            $("#h62").append("Attack " + player2.attack);
+            $("#h62").append("Block " + player2.counterAttack);
+            $("#h34").animate({ bottom: "-280px", left: "-20px" }, "slow");
+            console.log("Player chose " + player2.name)
+        }
+    });
+
+
+    
 
 
   

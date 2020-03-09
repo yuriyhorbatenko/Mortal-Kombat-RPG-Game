@@ -60,7 +60,7 @@ body {
 
 .containerB {
     padding-top: 40px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .hp1, .hp2, .hp3, .hp4  {
@@ -84,14 +84,9 @@ a:hover {
 }
 
 .image:hover {
-    box-shadow: 0 0 2px 1px red;
-    
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(255, 0, 0);
     }
-
-.gallery:hover {
-    width: 180; 
-    height: 180;
-}
 
 footer {
     font-size: 15px;
