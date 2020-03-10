@@ -26,6 +26,12 @@ jaxMusic.setAttribute("src", "audio/jax.wav");
 var milenaMusic = document.createElement("audio");
 milenaMusic.setAttribute("src", "audio/milena.wav");
 
+var youLose = document.createElement("audio");
+youLose.setAttribute("src", "audio/laugh.wav");
+
+var youWon = document.createElement("audio");
+youWon.setAttribute("src", "audio/flawless.wav");
+
 
 
 $("#btnPlay").on("click", function() {
@@ -61,7 +67,7 @@ $("#h34").on("click", function() {
 
 
     // Sub Zer0's stats:
-    subZeroHP = Math.floor(Math.random() * 200) + 200;
+    subZeroHP = Math.floor(Math.random() * 200) + 500;
     subZeroAttack = Math.floor(Math.random() * 100) + 50;
     subZeroCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp1").text(subZeroHP);
@@ -72,7 +78,7 @@ $("#h34").on("click", function() {
 
 
     // Scorpion's stats:
-    scorpionHP = Math.floor(Math.random() * 200) + 200;
+    scorpionHP = Math.floor(Math.random() * 200) + 500;
     scorpionAttack = Math.floor(Math.random() * 100) + 50;
     scorpionCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp2").text(scorpionHP);
@@ -83,7 +89,7 @@ $("#h34").on("click", function() {
 
 
     // Jax's stats:
-    jaxHP = Math.floor(Math.random() * 200) + 200;
+    jaxHP = Math.floor(Math.random() * 200) + 500;
     jaxAttack = Math.floor(Math.random() * 100) + 50;
     jaxCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp3").text(jaxHP);
@@ -94,7 +100,7 @@ $("#h34").on("click", function() {
 
 
     // Milena's stats:
-    milenaHP = Math.floor(Math.random() * 200) + 200;
+    milenaHP = Math.floor(Math.random() * 200) + 500;
     milenaAttack = Math.floor(Math.random() * 100) + 50;
     milenaCountAt = Math.floor(Math.random() * 50) + 25;
     $(".hp4").text(milenaHP);
@@ -102,8 +108,6 @@ $("#h34").on("click", function() {
     console.log("Milena Attack - " + milenaAttack);
     console.log("Milena Counter Attack - " + milenaCountAt);
     console.log("--------------------------------");
-
-
 
 
 
@@ -142,12 +146,14 @@ $("#h34").on("click", function() {
                 attack: subZeroAttack,
                 counterAttack: subZeroCountAt,
             }
-                        
-            $("#h71").append("Attack " + player1.attack);
-            $("#h81").append("Block " + player1.counterAttack);
+
+            $("#h61").append("Health - " + player1.hp);            
+            $("#h71").append("Attack - " + player1.attack);
+            $("#h81").append("Block - " + player1.counterAttack);
             $("#h31").animate({ bottom: "-280px", left: "20px" }, "slow");
             $("#h42").show();
             $("#btnFight").show();
+            $(".hp1").hide();
             console.log("Player chose " + player1.name)
         }
     
@@ -158,15 +164,16 @@ $("#h34").on("click", function() {
                 attack: subZeroAttack,
                 counterAttack: subZeroCountAt,
             }
-            
-            $("#h72").append("Attack " + player2.attack);
-            $("#h82").append("Block " + player2.counterAttack);
+
+            $("#h62").append("Health - " + player2.hp);
+            $("#h72").append("Attack - " + player2.attack);
+            $("#h82").append("Block - " + player2.counterAttack);
             $("#h31").animate({ bottom: "-280px", left: "530px" }, "slow");
+            $(".hp1").hide();
             setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
     });
-
 
 
     ///// Functions for Scorpion: /////
@@ -181,12 +188,14 @@ $("#h34").on("click", function() {
                 counterAttack: scorpionCountAt,
                 
             }
-            
-            $("#h71").append("Attack " + player1.attack);
-            $("#h81").append("Block " + player1.counterAttack);
+
+            $("#h61").append("Health - " + player1.hp);
+            $("#h71").append("Attack - " + player1.attack);
+            $("#h81").append("Block - " + player1.counterAttack);
             $("#h32").animate({ bottom: "-280px", left: "-170px" }, "slow");
             $("#h42").show();
             $("#btnFight").show();
+            $(".hp2").hide();
             console.log("Player chose " + player1.name)
         }
 
@@ -198,9 +207,11 @@ $("#h34").on("click", function() {
                 counterAttack: scorpionCountAt,
             }
             
-            $("#h72").append("Attack " + player2.attack);
-            $("#h82").append("Block " + player2.counterAttack);
+            $("#h62").append("Health - " + player2.hp);
+            $("#h72").append("Attack - " + player2.attack);
+            $("#h82").append("Block - " + player2.counterAttack);
             $("#h32").animate({ bottom: "-280px", left: "340px" }, "slow");
+            $(".hp2").hide();
             setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
@@ -219,11 +230,13 @@ $("#h34").on("click", function() {
                 counterAttack: jaxCountAt,
             }
             
-            $("#h71").append("Attack " + player1.attack);
-            $("#h81").append("Block " + player1.counterAttack);
+            $("#h61").append("Health - " + player1.hp);
+            $("#h71").append("Attack - " + player1.attack);
+            $("#h81").append("Block - " + player1.counterAttack);
             $("#h33").animate({ bottom: "-280px", left: "-360px" }, "slow");
             $("#h42").show();
             $("#btnFight").show();
+            $(".hp3").hide();
             console.log("Player chose " + player1.name)
         }
     
@@ -235,9 +248,11 @@ $("#h34").on("click", function() {
                 counterAttack: jaxCountAt,
             }
             
-            $("#h72").append("Attack " + player2.attack);
-            $("#h82").append("Block " + player2.counterAttack);
+            $("#h62").append("Health - " + player2.hp);
+            $("#h72").append("Attack - " + player2.attack);
+            $("#h82").append("Block - " + player2.counterAttack);
             $("#h33").animate({ bottom: "-280px", left: "150px" }, "slow");
+            $(".hp3").hide();
             setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
@@ -257,11 +272,13 @@ $("#h34").on("click", function() {
                 counterAttack: milenaCountAt,
             }
             
-            $("#h71").append("Attack " + player1.attack);
-            $("#h81").append("Block " + player1.counterAttack);
+            $("#h61").append("Health - " + player1.hp);
+            $("#h71").append("Attack - " + player1.attack);
+            $("#h81").append("Block - " + player1.counterAttack);
             $("#h34").animate({ bottom: "-280px", left: "-550px" }, "slow");
             $("#h42").show();
             $("#btnFight").show();
+            $(".hp4").hide();
             console.log("Player chose " + player1.name)
         }
 
@@ -273,32 +290,40 @@ $("#h34").on("click", function() {
                 counterAttack: milenaCountAt,
             }
             
-            $("#h72").append("Attack " + player2.attack);
-            $("#h82").append("Block " + player2.counterAttack);
+            $("#h62").append("Health - " + player2.hp);
+            $("#h72").append("Attack - " + player2.attack);
+            $("#h82").append("Block - " + player2.counterAttack);
             $("#h34").animate({ bottom: "-280px", left: "-45px" }, "slow");
+            $(".hp4").hide();
             setTimeout(function(){ fightMusic.play(); }, 1100);
             console.log("Player chose " + player2.name)
         }
     });
 
 
-
     ///// Functions for Attack: /////
 
 
     $("#btnFight").on("click", function(){
+
+        player2.hp -= player1.attack;
+        player1.attack += player1.counterAttack;
+        player1.hp -= player2.counterAttack;
         
 
-    
-        player1.attack != 0 && player2.attack != 0
+        if (player1.hp <= 0){
+            youLose.play();
+        }
 
-        player2.hp -= player1.hp;
+        else if (player2.hp <= 0){
+            youWon.play();
+        }
 
-        player1.attack += player1.counterAttack;
+        
+        $("#h71").detach(player2.hp);
+        $("#h72").detach(player1.hp);
 
-        player1.hp -= player2.counterAttack;
-    
-    
-    
-    
+        console.log(player1)
+        console.log(player2)
+
     });

@@ -79,17 +79,17 @@ body {
     font-size: 20px;
 }
 
-#h71, #h81 {
+#h61, #h71, #h81 {
     font-size: 20px;
     text-align: center;
-    top: 30px;
+    
     right: 65px;
 }
 
-#h72, #h82 {
+#h62, #h72, #h82 {
     font-size: 20px;
     text-align: center;
-    top: 30px;
+    
     left: 65px;
      
 }
