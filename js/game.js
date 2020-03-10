@@ -320,8 +320,8 @@ $("#h34").on("click", function() {
         }
 
         
-        $("#h71").detach(player2.hp);
-        $("#h72").detach(player1.hp);
+        $("#h71").append(player2.hp);
+        $("#h72").append(player1.hp);
 
         console.log(player1)
         console.log(player2)
