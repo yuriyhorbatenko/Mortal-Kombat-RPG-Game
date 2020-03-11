@@ -115,7 +115,6 @@ $("#h34").on("click", function() {
 
 
 
-    var playerwin = 0;
     var playerlose = [];
 
     var player1 = {
@@ -309,19 +308,36 @@ $("#h34").on("click", function() {
         player2.hp -= player1.attack;
         player1.attack += player1.counterAttack;
         player1.hp -= player2.counterAttack;
-        
 
-        if (player1.hp <= 0){
+        $("#h61").empty();
+        $("#h62").empty();
+
+        $("#h71").empty();
+        $("#h72").empty();
+
+        $("#h81").empty();
+        $("#h82").empty();
+        
+        if (player1.hp < 0){
+            player1.hp = 0
             youLose.play();
         }
 
-        else if (player2.hp <= 0){
-            youWon.play();
+        else if (player2.hp < 0){
+                 player2.hp = 0
+                 youWon.play();
         }
 
+
+        $("#h61").append("Health - " + player1.hp);
+        $("#h62").append("Health - " + player2.hp);
+
+        //$("#h71").append("Attack - " + player1.attack);
+        //$("#h72").append("Attack - " + player2.attack);
+
+        //$("#h81").append("Block - " + player1.counterAttack);
+        //$("#h82").append("Block - " + player2.counterAttack);
         
-        $("#h71").append(player2.hp);
-        $("#h72").append(player1.hp);
 
         console.log(player1)
         console.log(player2)
