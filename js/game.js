@@ -332,13 +332,6 @@ $("#h34").on("click", function() {
         $("#h61").append("Health - " + player1.hp);
         $("#h62").append("Health - " + player2.hp);
 
-        //$("#h71").append("Attack - " + player1.attack);
-        //$("#h72").append("Attack - " + player2.attack);
-
-        //$("#h81").append("Block - " + player1.counterAttack);
-        //$("#h82").append("Block - " + player2.counterAttack);
-        
-
         console.log(player1)
         console.log(player2)
 
