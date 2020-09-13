@@ -301,7 +301,7 @@ $("#h34").on("click", function() {
 
 
     ///// Functions for Attack: /////
-
+    
 
     $("#btnFight").on("click", function(){
 
